@@ -95,6 +95,21 @@ document
     document.getElementById("fieldContainer").appendChild(newFieldContainer);
   });
 
+// prevent next step if field is empty
+let firstStep = document.querySelector(".first-step");
+let secondStep = document.querySelector(".second-step");
+let thirdStep = document.querySelector(".third-step");
+let fourthStep = document.querySelector(".fourth-step");
+
+// display alert message when click on firstStep, secondStep, thirdStep, fourthStep
+firstStep.addEventListener("click", function () {});
+
+secondStep.addEventListener("click", function () {});
+
+thirdStep.addEventListener("click", function () {});
+
+fourthStep.addEventListener("click", function () {});
+
 // jQuery Code here
 (function ($) {
   $(document).ready(function () {

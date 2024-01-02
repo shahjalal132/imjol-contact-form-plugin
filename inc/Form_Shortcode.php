@@ -146,7 +146,7 @@ function imjol_contact_form_callback() {
                                                                 <div class="form-group formify-mg-top-40">
                                                                     <div class="formify-forms__button">
                                                                         <button
-                                                                            class="formify-btn next-step">Next</button>
+                                                                            class="formify-btn next-step first-step">Next</button>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -175,7 +175,7 @@ function imjol_contact_form_callback() {
                                                             <button type="button" class="add_but"
                                                                 id="addFieldButton">Add
                                                                 Requirement</button>
-                                                            <button class="formify-btn next-step">Next</button>
+                                                            <button class="formify-btn next-step second-step">Next</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -218,7 +218,7 @@ function imjol_contact_form_callback() {
                                                                         <button
                                                                             class="formify-btn prev-step">Previous</button>
                                                                         <button
-                                                                            class="formify-btn next-step">Next</button>
+                                                                            class="formify-btn next-step third-step">Next</button>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -263,7 +263,7 @@ function imjol_contact_form_callback() {
                                                                         <button
                                                                             class="formify-btn prev-step">Previous</button>
                                                                         <button
-                                                                            class="formify-btn next-step">Next</button>
+                                                                            class="formify-btn next- fourth-step">Next</button>
                                                                     </div>
                                                                 </div>
                                                             </div>
