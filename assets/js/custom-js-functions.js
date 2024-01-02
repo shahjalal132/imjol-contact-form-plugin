@@ -9,14 +9,13 @@ const websiteValue = document.querySelector('input[name="website"]');
 const mobileAppValue = document.querySelector('input[name="mobile-app"]');
 const softwareValue = document.querySelector('input[name="software"]');
 
-// get error-check-web-app-soft paragraph
+// get requirement field value
+const requirementValue = document.querySelector("#requirement");
+
 let errorCheckWebAppSoft = document.querySelector(".error-check-web-app-soft");
-
-secondStep.addEventListener("click", function () {});
-
-thirdStep.addEventListener("click", function () {});
-
-fourthStep.addEventListener("click", function () {});
+let errorRequirementMessage = document.querySelector(
+  ".error-requirement-message"
+);
 
 (function ($) {
   $(document).ready(function () {
@@ -57,6 +56,7 @@ fourthStep.addEventListener("click", function () {});
     // next step functionality
     $(".next-step").click(function (event) {
       event.preventDefault();
+
       if (
         currentStep === 0 &&
         websiteValue.checked === false &&
@@ -67,10 +67,20 @@ fourthStep.addEventListener("click", function () {});
         setTimeout(function () {
           errorCheckWebAppSoft.style.display = "none";
         }, 2000);
-        event.preventDefault();
         return false;
       }
+
+      if (currentStep === 1 && requirementValue.value.trim() === "") {
+        // Check if requirementValue is empty
+        errorRequirementMessage.style.display = "block";
+        setTimeout(function () {
+          errorRequirementMessage.style.display = "none";
+        }, 2000);
+        return false;
+      }
+
       currentStep++;
+
       if (currentStep < steps.length) {
         showStep(currentStep);
       } else {

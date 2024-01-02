@@ -164,6 +164,9 @@ function imjol_contact_form_callback() {
                                                             Requirement</h3>
                                                         <div class="formify-forms__quiz-form formify-mg-top-10">
                                                             <button class="required">Your Requirement</button>
+                                                            <p class="error-requirement-message">
+                                                                Please write your requirement
+                                                            </p>
                                                             <div id="fieldContainer">
                                                                 <textarea placeholder="Write Your Requirement"
                                                                     id="requirement" name="requirement"></textarea>
@@ -264,7 +267,7 @@ function imjol_contact_form_callback() {
                                                                         <button
                                                                             class="formify-btn prev-step">Previous</button>
                                                                         <button
-                                                                            class="formify-btn next- fourth-step">Next</button>
+                                                                            class="formify-btn next-step fourth-step">Next</button>
                                                                     </div>
                                                                 </div>
                                                             </div>
