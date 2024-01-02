@@ -298,7 +298,7 @@ function imjol_contact_form_callback() {
                                                                         <div class="form-group">
                                                                             <div class="formify-forms__input">
                                                                                 <label>Address <span>*</span></label>
-                                                                                <input type="textarea" name="address"
+                                                                                <input type="textarea" name="address"id="form-address"
                                                                                     placeholder="Enter your address"
                                                                                     required="required">
                                                                             </div>
