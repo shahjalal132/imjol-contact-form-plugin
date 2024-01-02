@@ -1,0 +1,808 @@
+/*======================================
+	Theme Default
+========================================*/
+*,
+*::after *::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fonts Family */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trirong:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=space-grotesk@300,700,500,400,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trirong:ital,wght@0,400;0,500;0,600;0,700;1,400&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=archivo@701,401,801,700,800,500,501,400,600,601&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,700,500,600,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #101010
+}
+h1,h2,h3,h4,h5,h6 {
+    margin: 0 0 15px;
+}
+h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a {
+	font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    line-height: 140%;
+    color: #101010;
+	transition:all 0.3s ease;
+}
+.formify-font-light{
+	font-family: 'Inter', sans-serif;
+	font-weight:300;
+}
+.formify-font-regular{
+	font-family: 'Inter', sans-serif;
+	font-weight:400;
+}
+.formify-font-medium{
+	font-family: 'Inter', sans-serif;
+	font-weight:500;
+}
+.formify-lspacing{
+	letter-spacing: .025em;
+}
+button,a, span,div{
+	transition:all 0.3s ease;
+}
+.formify-bg-cover{
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+h1,.nft-h1 {
+    font-size: 46px;
+}
+h2,.nft-h2 {
+    font-size: 26px;
+}
+h3,.nft-h3 {
+    font-size: 20px;
+}
+h4,.nft-h4 {
+    font-size: 18px;
+}
+h5,.nft-h5 {
+    font-size: 16px;
+}
+h6,.nft-h6 {
+    font-size: 14px;
+}
+div{
+	position: relative;
+}
+p {
+	color: #4B5563;
+	margin: 0;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 140%;
+}
+a {
+	color: #3D46FB;
+}
+a,button{
+	font-weight:500;
+}
+label{
+	transition: all 0.3s ease;
+}
+input,
+textarea {
+    font-weight: 400;
+}
+input:focus,
+textarea:focus,
+select:focus{
+	color:#2F3032 !important;
+}
+
+.nice-select:hover,.nice-select:focus{
+    box-shadow: none !important;
+}
+
+.formify-overflow-hd{
+    overflow: hidden;
+}
+b, strong {
+	font-weight: bold;
+}
+label {
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+textarea::-webkit-input-placeholder,input::-webkit-input-placeholder {
+    opacity: 1;
+    color: #9AA2B1 !important;
+}
+textarea::-moz-placeholder,input::-moz-placeholder {
+    opacity: 1;
+    color: #9AA2B1 !important;
+}
+textarea::-ms-input-placeholder,input::-ms-input-placeholder {
+    opacity: 1;
+    color: #9AA2B1 !important;
+}
+.formify-gap-30 {
+	--bs-gutter-x: 30px;
+}
+.formify-gap-sq30 {
+	--bs-gutter-x: 30px;
+	--bs-gutter-y: 30px;
+}
+.formify-gap-40 {
+	--bs-gutter-x: 40px;
+}
+/* Background */
+.formify-bg-cover{
+	background-size:cover;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+.formify-pcolor{
+	color: #0A82FD !important;
+}
+.p-relative{
+	position:relative;
+}
+.container {
+	max-width: 1260px;
+	margin: 0 auto;
+}
+.formify-container2 {
+	max-width: 1220px;
+}
+.formify-container3{
+    max-width: 1440px;
+}
+.formify-container4{
+    max-width: 1290px;
+}
+.container-fluid {
+    padding: 0;
+}
+@media only screen and (min-width: 1278px) and (max-width: 1600px){
+    .formify-container3{
+        max-width: 1260px;
+    }
+}
+html {
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+img {
+    max-width: 100%;
+}
+a {
+    text-decoration: none;
+}
+a:active,
+a:hover {
+    outline: 0;
+    text-decoration: none;
+	color:#0A82FD;
+}
+img {
+    border: 0;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+figure {
+    margin: 1em 40px;
+}
+hr {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+pre {
+    overflow: auto;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    margin: 0;
+}
+button:focus-visible {
+    outline: none;
+}
+input:focus-visible {
+    outline: none;
+}
+textarea:focus-visible {
+    outline: none;
+}
+button {
+    overflow: visible;
+}
+button,
+select {
+    text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="Default"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+button[disabled], html input[disabled] {
+	cursor: default;
+	background: #F0F7FF;
+	border: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+input {
+    line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+legend {
+    border: 0;
+    padding: 0;
+}
+textarea {
+    overflow: auto;
+}
+optgroup {
+    font-weight: bold;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+dfn,
+cite,
+em,
+i {
+    font-style: italic;
+}
+
+address {
+    margin: 0 0 1.5em;
+}
+pre {
+    background: #eee;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1.6em;
+}
+code,
+kbd,
+tt,
+var {
+    font-size: 15px;
+    font-size: 0.9375rem;
+}
+abbr,
+acronym {
+    border-bottom: 1px dotted #666;
+    cursor: help;
+}
+mark,
+ins {
+    background: #fff9c0;
+    text-decoration: none;
+}
+big {
+    font-size: 125%;
+}
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    scroll-behavior: auto !important;
+}
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+body {
+	background: #fff;
+}
+hr {
+    background-color: #ccc;
+    border: 0;
+    height: 1px;
+    margin-bottom: 1.5em;
+}
+
+.list-none,
+.list-none li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+	list-style-type: disc;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+a {
+	display: inline-block;
+	cursor: pointer;
+}
+dt {
+    font-weight: bold;
+}
+dd {
+    margin: 0 1.5em 1.5em;
+}
+img {
+    height: auto;
+    max-width: 100%;
+    margin-right: 17px;
+}
+.required {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-bottom: 10px;
+}
+button,
+input[type="button"],
+input[type="Default"],
+input[type="submit"] {
+    color: #ffffff;
+    border-radius: 3px;
+    padding: 0px;
+    line-height: initial;
+    width: 100%;
+	height: 50px;
+	background: #fe4c1c;
+	border: 1px solid #E4F2FF;
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+    color: #9AA2B1;
+    border-radius: 3px;
+    padding: 0px;
+    line-height: initial;
+    width: 100%;
+	height: 50px;
+	background: #FAFAFA;
+	border: 1px solid #E4F2FF;
+    resize: none;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+    color: #9AA2B1;
+    border-radius: 3px;
+    line-height: initial;
+    width: 100%;
+	background: #FAFAFA;
+	border: 1px solid #E4F2FF;
+}
+select {
+	border: 1px solid #E4F2FF;
+}
+textarea {
+    width: 100%;
+}
+
+a:hover,
+a:active {
+    outline: 0;
+}
+
+form input::-webkit-input-placeholder,
+form textarea::-webkit-input-placeholder {
+ color:#9AA2B1 !important;
+ opacity:1
+}
+form input:-ms-input-placeholder,
+form textarea:-ms-input-placeholder {
+ color:#9AA2B1 !important;
+ opacity:1
+}
+form input::placeholder,
+form textarea::placeholder {
+ color:#9AA2B1 !important;
+ opacity:1
+}
+/*======================================
+    Padding Margin
+========================================*/
+/*======================================
+    Padding Margin
+========================================*/
+.formify-pd-btm-0 {
+	padding-bottom: 0px !important;
+}
+.formify-pd-top-10 {
+    padding-top: 10px;
+}
+.formify-pd-top-20 {
+    padding-top: 20px;
+}
+.formify-pd-top-30 {
+    padding-top: 30px;
+}
+.formify-pd-top-40 {
+    padding-top: 40px;
+}
+.formify-pd-top-50 {
+    padding-top: 50px;
+}
+.formify-pd-top-60 {
+    padding-top: 60px;
+}
+.formify-pd-top-70 {
+    padding-top: 70px;
+}
+.formify-pd-top-80 {
+    padding-top: 80px;
+}
+.formify-pd-top-90 {
+    padding-top: 90px;
+}
+.formify-pd-top-100 {
+    padding-top: 100px;
+}
+.formify-pd-top-110 {
+    padding-top: 110px;
+}
+.formify-pd-top-120 {
+    padding-top: 120px;
+}
+.formify-pd-btm-10 {
+    padding-bottom: 10px;
+}
+.formify-pd-btm-20 {
+    padding-bottom: 20px;
+}
+.formify-pd-btm-30 {
+    padding-bottom: 30px;
+}
+.formify-pd-btm-40 {
+    padding-bottom: 40px;
+}
+.formify-pd-btm-50 {
+    padding-bottom: 50px;
+}
+.formify-pd-btm-60 {
+    padding-bottom: 60px;
+}
+.formify-pd-btm-70 {
+    padding-bottom: 70px;
+}
+.formify-pd-btm-80 {
+    padding-bottom: 80px;
+}
+.formify-pd-btm-90 {
+    padding-bottom: 90px;
+}
+.formify-pd-btm-100 {
+    padding-bottom: 100px;
+}
+.formify-pd-btm-110 {
+    padding-bottom: 110px;
+}
+.formify-pd-btm-120 {
+    padding-bottom: 120px;
+}
+
+.formify-mg-top-10 {
+    margin-top: 10px !important;
+}
+.formify-mg-top-15 {
+    margin-top: 15px !important;
+}
+.formify-mg-top-20 {
+    margin-top: 20px !important;
+}
+.formify-mg-top-25 {
+    margin-top: 25px !important;
+}
+.formify-mg-top-30 {
+    margin-top: 30px !important;
+}
+.formify-mg-top-35 {
+    margin-top: 35px !important;
+}
+.formify-mg-top-40 {
+    margin-top: 40px !important;
+}
+.formify-mg-top-50 {
+    margin-top: 50px !important;
+}
+.formify-mg-top-60 {
+    margin-top: 60px !important;
+}
+.formify-mg-top-70 {
+    margin-top: 70px !important;
+}
+.formify-mg-top-80 {
+    margin-top: 80px !important;
+}
+.formify-mg-top-90 {
+    margin-top: 90px !important;
+}
+.formify-mg-top-100 {
+    margin-top: 100px !important;
+}
+.formify-mg-top-110 {
+    margin-top: 110px !important;
+}
+.formify-mg-top-120 {
+    margin-top: 120px !important;
+}
+.formify-mg-btm-10 {
+    margin-bottom: 10px !important;
+}
+.formify-mg-btm-15 {
+    margin-bottom: 15px !important;
+}
+.formify-mg-btm-20 {
+    margin-bottom: 20px !important;
+}
+.formify-mg-btm-30 {
+    margin-bottom: 30px !important;
+}
+.formify-mg-btm-35 {
+    margin-bottom: 35px !important;
+}
+.formify-mg-btm-40 {
+    margin-bottom: 40px !important;
+}
+.formify-mg-btm-50 {
+    margin-bottom: 50px !important;
+}
+.formify-mg-btm-60 {
+    margin-bottom: 60px !important;
+}
+.formify-mg-btm-70 {
+    margin-bottom: 70px !important;
+}
+.formify-mg-btm-80 {
+    margin-bottom: 80px !important;
+}
+.formify-mg-btm-90 {
+    margin-bottom: 90px !important;
+}
+.formify-mg-btm-100 {
+    margin-bottom: 100px !important;
+}
+.formify-mg-btm-110 {
+    margin-bottom: 110px !important;
+}
+.formify-mg-btm-120 {
+    margin-bottom: 120px !important;
+}
+
+.formify-section-padding{
+    padding: 120px 0px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+.formify-forms__contact.formify-forms__contact--v5 input:-webkit-autofill,
+.formify-form__contact.formify-form__contact--V5 input:-webkit-autofill:hover,
+.formify-form__contact.formify-form__contact--V5 input:-webkit-autofill:focus,
+.formify-form__contact.formify-form__contact--V5 input:-webkit-autofill:active,
+.formify-forms__contact.formify-forms__contact--V6 input:-webkit-autofill,
+.formify-forms__contact.formify-forms__contact--V6 input:-webkit-autofill:hover,
+.formify-forms__contact.formify-forms__contact--V6 input:-webkit-autofill:focus,
+.formify-forms__contact.formify-forms__contact--V6 input:-webkit-autofill:active{
+    -webkit-box-shadow: none !important;
+    transition: background-color 9999s ease-in-out 0s !important; 
+    -webkit-text-fill-color: #fff !important;
+}
+.formify-forms__contact.formify-forms__contact--v7 input:-webkit-autofill,
+.formify-form__contact.formify-form__contact--V7 input:-webkit-autofill:hover,
+.formify-form__contact.formify-form__contact--V7 input:-webkit-autofill:focus,
+.formify-form__contact.formify-form__contact--V7 input:-webkit-autofill:active{
+    -webkit-box-shadow: none !important;
+    transition: background-color 9999s ease-in-out 0s !important; 
+    -webkit-text-fill-color: #4B5563  !important;
+}
+.formify-forms__contact.formify-forms__contact--v9 input:-webkit-autofill,
+.formify-form__contact.formify-form__contact--v9 input:-webkit-autofill:hover,
+.formify-form__contact.formify-form__contact--v9 input:-webkit-autofill:focus,
+.formify-form__contact.formify-form__contact--v9 input:-webkit-autofill:active{
+    -webkit-box-shadow: none !important;
+    transition: background-color 9999s ease-in-out 0s !important; 
+    -webkit-text-fill-color: #000  !important;
+}
+
+.formify-forms.formify-forms__contact--v2 input:-webkit-autofill,
+.formify-forms.formify-forms__contact--v2 input:-webkit-autofill:hover,
+.formify-forms.formify-forms__contact--v2 input:-webkit-autofill:focus,
+.formify-forms.formify-forms__contact--v2 input:-webkit-autofill:active{
+    -webkit-box-shadow: none !important;
+    transition: background-color 9999s ease-in-out 0s !important; 
+    -webkit-text-fill-color: #fff  !important;
+}
+
+
+.formify-coming-soon .formify-coming-soon__label,
+.formify-coming-soon .formify-coming-soon__title,
+.formify-coming-soon p,
+.formify-coming-soon span,
+.formify-coming-soon input,
+.formify-coming-soon button{
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.formify-coming-soon--v3 .formify-coming-soon__title,
+.formify-coming-soon--v3 .formify-coming-soon__subtitle,
+.formify-coming-soon--v3 p,
+.formify-coming-soon--v3 span,
+.formify-coming-soon--v3 input,
+.formify-coming-soon--v3 button{
+    font-family: 'Trirong', serif;
+}
+
+
+.formify-coming-soon--v4 .formify-coming-soon__title,
+.formify-coming-soon--v4 p,
+.formify-coming-soon--v4 input,
+.formify-coming-soon--v4 button,
+.formify-coming-soon--v4 span,
+.formify-coming-soon--v5 .formify-coming-soon__title,
+.formify-coming-soon--v5 p,
+.formify-coming-soon--v5 input,
+.formify-coming-soon--v5 button,
+.formify-coming-soon--v5 span,
+.formify-coming-soon--v9 .formify-coming-soon__title,
+.formify-coming-soon--v9 p,
+.formify-coming-soon--v9 input,
+.formify-coming-soon--v9 button,
+.formify-coming-soon--v9 span{
+    font-family: 'Space Grotesk', sans-serif;
+}
+.formify-coming-soon--v4 #formify_countdown .fc-count{
+    font-family: 'Tilt Prism', cursive;
+}
+
+.formify-coming-soon--v6 .formify-coming-soon__title,
+.formify-coming-soon--v6 p,
+.formify-coming-soon--v6 input,
+.formify-coming-soon--v6 button,
+.formify-coming-soon--v6 span{
+    font-family: 'Archivo', sans-serif;
+}
+.formify-coming-soon--v7  .formify-coming-soon__title,
+.formify-coming-soon--v7  p,
+.formify-coming-soon--v7  input,
+.formify-coming-soon--v7  button,
+.formify-coming-soon--v7  span{
+    font-family: 'Playfair Display', serif;
+}
+
+.formify-coming-soon--v7 .fc-count,
+.formify-coming-soon--v13 .fc-count{
+    font-family: 'Share Tech', sans-serif;
+}
+
+.formify-coming-soon--v8 .formify-coming-soon__title,
+.formify-coming-soon--v8 p,
+.formify-coming-soon--v8 input,
+.formify-coming-soon--v8 button,
+.formify-coming-soon--v8 span,
+.formify-coming-soon--v12 .formify-coming-soon__title,
+.formify-coming-soon--v12 p,
+.formify-coming-soon--v12 input,
+.formify-coming-soon--v12 button,
+.formify-coming-soon--v12 span{
+    font-family: 'Clash Display', sans-serif;
+}
+
+.formify-coming-soon--v10 .formify-coming-soon__title,
+.formify-coming-soon--v10 p,
+.formify-coming-soon--v10 input,
+.formify-coming-soon--v10 button,
+.formify-coming-soon--v10 span{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.formify-coming-soon--v11 .formify-coming-soon__title,
+.formify-coming-soon--v11 p,
+.formify-coming-soon--v11 input,
+.formify-coming-soon--v11 button,
+.formify-coming-soon--v11 span{
+    font-family: 'EB Garamond', serif;
+}
+
+.formify-coming-soon--v13 .formify-coming-soon__title,
+.formify-coming-soon--v13 p,
+.formify-coming-soon--v13 input,
+.formify-coming-soon--v13 button,
+.formify-coming-soon--v13 span{
+    font-family: 'Lato', sans-serif;
+}
+
+.formify-coming-soon--v14 .formify-coming-soon__title,
+.formify-coming-soon--v14 .ClassyCountdown-value > div{
+    font-family: 'Abril Fatface', cursive;
+}
+/*======================================
+	End Theme Default
+========================================*/
