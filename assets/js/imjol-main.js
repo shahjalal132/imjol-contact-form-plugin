@@ -101,17 +101,6 @@ document
     // Nice select
     $("select").niceSelect();
 
-    // Step up functionalities
-    /* $(document).on("click", ".next-step", function (event) {
-      event.preventDefault();
-      currentStep++;
-      if (currentStep < steps.length ) {
-        showStep(currentStep);
-      } else {
-        // Handle form submission or completion here
-      }
-    }); */
-
     // Client site form validation
     // Display Error message
     $("#submit-btn").on("click", function (e) {
@@ -129,7 +118,6 @@ document
       var watsAppNumber = $('input[name="whats-app-number"]').val();
 
       if (
-        requirement === "" ||
         firstName === "" ||
         address === "" ||
         email === "" ||
@@ -140,13 +128,13 @@ document
         $(".success-message").fadeOut();
         setTimeout(() => {
           $(".error-message").fadeOut();
-        }, 2000);
+        }, 4000);
       } else {
         $(".success-message").fadeIn();
         $(".error-message").fadeOut();
         setTimeout(() => {
           $(".success-message").fadeOut();
-        }, 2000);
+        }, 4000);
       }
     });
 

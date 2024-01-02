@@ -187,6 +187,9 @@ function imjol_contact_form_callback() {
                                                 <!-- Step 3 -->
                                                 <div class="tab-pane fade show active" id="step3">
                                                     <div class="formify-forms__quiz-single">
+                                                        <p class="error-budget-message">
+                                                            Please select your budget
+                                                        </p>
                                                         <h3 class="formify-forms__quiz-title--v5 m-0">Write Your Budget?
                                                         </h3>
                                                         <div class="formify-forms__quiz-form formify-mg-top-40">
@@ -239,6 +242,9 @@ function imjol_contact_form_callback() {
                                                         <div class="formify-forms__quiz-form formify-mg-top-40">
                                                             <div class="formify-forms__quiz-form">
                                                                 <!-- Single Group for Multiple Selection (Website) -->
+                                                                <p class="error-deadline-message">
+                                                                    Please select your deadline
+                                                                </p>
                                                                 <div class="time-dropdown">
                                                                     <button class="time-dropdown-button"><img
                                                                             src="<?php echo IMJOL_PLUGIN_URL ?>/assets/images/img.png"

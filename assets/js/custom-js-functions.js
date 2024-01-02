@@ -16,6 +16,8 @@ let errorCheckWebAppSoft = document.querySelector(".error-check-web-app-soft");
 let errorRequirementMessage = document.querySelector(
   ".error-requirement-message"
 );
+let errorBudgetMessage = document.querySelector(".error-budget-message");
+let errorDeadlineMessage = document.querySelector(".error-deadline-message");
 
 (function ($) {
   $(document).ready(function () {
@@ -53,6 +55,22 @@ let errorRequirementMessage = document.querySelector(
       completionPercent.text(`${percent.toFixed(0)}% Complete`);
     }
 
+    var choiceBudget;
+    var choiceDateline;
+    // Budget Dropdown item select
+    $(".budget-dropdown-content a").click(function (e) {
+      e.preventDefault(); // Prevent the default link behavior
+
+      choiceBudget = $(this).text().trim(); // Get the text of the clicked link
+    });
+
+    // Select Dead line
+    $(".time-dropdown-content a").click(function (e) {
+      e.preventDefault(); // Prevent the default link behavior
+
+      choiceDateline = $(this).text().trim();
+    });
+
     // next step functionality
     $(".next-step").click(function (event) {
       event.preventDefault();
@@ -66,7 +84,7 @@ let errorRequirementMessage = document.querySelector(
         errorCheckWebAppSoft.style.display = "block";
         setTimeout(function () {
           errorCheckWebAppSoft.style.display = "none";
-        }, 2000);
+        }, 4000);
         return false;
       }
 
@@ -75,7 +93,25 @@ let errorRequirementMessage = document.querySelector(
         errorRequirementMessage.style.display = "block";
         setTimeout(function () {
           errorRequirementMessage.style.display = "none";
-        }, 2000);
+        }, 4000);
+        return false;
+      }
+
+      if (currentStep === 2 && !choiceBudget) {
+        // Check if choiceBudget is empty
+        errorBudgetMessage.style.display = "block";
+        setTimeout(function () {
+          errorBudgetMessage.style.display = "none";
+        }, 4000);
+        return false;
+      }
+
+      if (currentStep === 3 && !choiceDateline) {
+        // Check if choiceBudget is empty
+        errorDeadlineMessage.style.display = "block";
+        setTimeout(function () {
+          errorDeadlineMessage.style.display = "none";
+        }, 4000);
         return false;
       }
 
