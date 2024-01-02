@@ -101,8 +101,17 @@ let secondStep = document.querySelector(".second-step");
 let thirdStep = document.querySelector(".third-step");
 let fourthStep = document.querySelector(".fourth-step");
 
+// get first step fields value
+const websiteValue = document.querySelector('input[name="website"]');
+const mobileAppValue = document.querySelector('input[name="mobile-app"]');
+const softwareValue = document.querySelector('input[name="software"]');
+
 // display alert message when click on firstStep, secondStep, thirdStep, fourthStep
-firstStep.addEventListener("click", function () {});
+firstStep.addEventListener("click", function () {
+  if(websiteValue.checked === false && mobileAppValue.checked === false && softwareValue.checked === false) {
+    alert("Please select at least one field");
+  }
+});
 
 secondStep.addEventListener("click", function () {});
 
