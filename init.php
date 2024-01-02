@@ -41,4 +41,4 @@ register_deactivation_hook( __FILE__, 'imjol_db_table_remove' );
 
 
 // include all files
-require_once IMJOL_PLUGIN_PATH . '/inc/DB_Table_Create.php';
+require_once IMJOL_PLUGIN_PATH . '/inc/Custom_Functions.php';
