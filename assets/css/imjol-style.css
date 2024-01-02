@@ -8345,10 +8345,27 @@ button {
   -o-border-radius: 5px;
 }
 
-.error-message {
+.error-message{
   display: none;
   position: absolute;
   bottom: 50px;
+  right: 8px;
+  background-color: red;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.error-check-web-app-soft{
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  z-index: 10;
   right: 8px;
   background-color: red;
   color: #fff;

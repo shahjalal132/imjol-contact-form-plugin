@@ -95,30 +95,6 @@ document
     document.getElementById("fieldContainer").appendChild(newFieldContainer);
   });
 
-// prevent next step if field is empty
-let firstStep = document.querySelector(".first-step");
-let secondStep = document.querySelector(".second-step");
-let thirdStep = document.querySelector(".third-step");
-let fourthStep = document.querySelector(".fourth-step");
-
-// get first step fields value
-const websiteValue = document.querySelector('input[name="website"]');
-const mobileAppValue = document.querySelector('input[name="mobile-app"]');
-const softwareValue = document.querySelector('input[name="software"]');
-
-// display alert message when click on firstStep, secondStep, thirdStep, fourthStep
-firstStep.addEventListener("click", function () {
-  if(websiteValue.checked === false && mobileAppValue.checked === false && softwareValue.checked === false) {
-    alert("Please select at least one field");
-  }
-});
-
-secondStep.addEventListener("click", function () {});
-
-thirdStep.addEventListener("click", function () {});
-
-fourthStep.addEventListener("click", function () {});
-
 // jQuery Code here
 (function ($) {
   $(document).ready(function () {
@@ -126,15 +102,15 @@ fourthStep.addEventListener("click", function () {});
     $("select").niceSelect();
 
     // Step up functionalities
-    $(document).on("click", ".next-step", function (event) {
+    /* $(document).on("click", ".next-step", function (event) {
       event.preventDefault();
       currentStep++;
-      if (currentStep < steps.length) {
+      if (currentStep < steps.length ) {
         showStep(currentStep);
       } else {
         // Handle form submission or completion here
       }
-    });
+    }); */
 
     // Client site form validation
     // Display Error message

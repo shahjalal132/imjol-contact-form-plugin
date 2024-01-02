@@ -1,3 +1,23 @@
+// get steps buttons
+let firstStep = document.querySelector(".first-step");
+let secondStep = document.querySelector(".second-step");
+let thirdStep = document.querySelector(".third-step");
+let fourthStep = document.querySelector(".fourth-step");
+
+// get first step fields values
+const websiteValue = document.querySelector('input[name="website"]');
+const mobileAppValue = document.querySelector('input[name="mobile-app"]');
+const softwareValue = document.querySelector('input[name="software"]');
+
+// get error-check-web-app-soft paragraph
+let errorCheckWebAppSoft = document.querySelector(".error-check-web-app-soft");
+
+secondStep.addEventListener("click", function () {});
+
+thirdStep.addEventListener("click", function () {});
+
+fourthStep.addEventListener("click", function () {});
+
 (function ($) {
   $(document).ready(function () {
     const form = $("#multiStepForm");
@@ -34,8 +54,22 @@
       completionPercent.text(`${percent.toFixed(0)}% Complete`);
     }
 
+    // next step functionality
     $(".next-step").click(function (event) {
       event.preventDefault();
+      if (
+        currentStep === 0 &&
+        websiteValue.checked === false &&
+        mobileAppValue.checked === false &&
+        softwareValue.checked === false
+      ) {
+        errorCheckWebAppSoft.style.display = "block";
+        setTimeout(function () {
+          errorCheckWebAppSoft.style.display = "none";
+        }, 2000);
+        event.preventDefault();
+        return false;
+      }
       currentStep++;
       if (currentStep < steps.length) {
         showStep(currentStep);

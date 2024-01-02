@@ -65,6 +65,7 @@ function imjol_contact_form_callback() {
                                                         <div class="formify-forms__quiz-form formify-mg-top-40">
                                                             <div class="formify-forms__quiz-form">
                                                                 <!-- Single Group for Multiple Selection (Website) -->
+                                                                <p class="error-check-web-app-soft">Please select at least one Service</p>
                                                                 <div class="form-group formify-mg-top-15">
                                                                     <div
                                                                         class="formify-forms__input formify-forms__input--quiz">
