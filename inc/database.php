@@ -22,7 +22,7 @@ $customDeadline    = isset( $all_data['customProjectDeadline'] ) ? $all_data['cu
 $select_deadline   = isset( $all_data['deadline'] ) ? $all_data['deadline'] : null;
 $fullDeadline      = $customDeadline . $select_deadline;
 $trimDeadline      = trim( $fullDeadline );
-$cleanFullDeadline = str_replace( 'Preferred Project Duration', '', $trimDeadline, 3 );
+$cleanFullDeadline = str_replace( 'Preferred', '', $trimDeadline );
 
 $requirement     = isset( $all_data['requirement'] ) ? $all_data['requirement'] : null;
 $newRequirement  = isset( $all_data['newRequirement'] ) ? $all_data['newRequirement'] : null;
@@ -92,4 +92,12 @@ if ( !empty( $first_name ) ) {
 } else {
     echo '';
 }
+
+
+function display_form_data_callback() {
+    echo '<pre>';
+    print_r( $all_data );
+    wp_die();
+}
+add_shortcode( 'display_form_data', 'display_form_data_callback' );
 ?>

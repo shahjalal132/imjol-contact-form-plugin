@@ -44,4 +44,4 @@ register_deactivation_hook( __FILE__, 'imjol_db_table_remove' );
 require_once IMJOL_PLUGIN_PATH . '/inc/Custom_Functions.php';
 require_once IMJOL_PLUGIN_PATH . '/inc/Enqueue_Assets.php';
 require_once IMJOL_PLUGIN_PATH . '/inc/Form_Shortcode.php';
-require_once IMJOL_PLUGIN_PATH . '/inc/Register_Top_Label_Menu.php';
+require_once IMJOL_PLUGIN_PATH . '/inc/database.php';
