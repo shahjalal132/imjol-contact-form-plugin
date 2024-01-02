@@ -30,6 +30,12 @@ if ( !defined( 'IMJOL_PLUGIN_URL' ) ) {
 }
 
 
+// db table create when plugin activate
+register_activation_hook( __FILE__, 'imjol_db_table_create' );
+
+// remove db table when plugin deactivate
+register_deactivation_hook( __FILE__, 'imjol_db_table_remove' );
+
 
 
 
