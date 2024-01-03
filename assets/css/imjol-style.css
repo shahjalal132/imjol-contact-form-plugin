@@ -8471,6 +8471,14 @@ button {
 	border-color: #0087F1;
 }
 
+textarea.custom-requirement-field.mt-3 {
+  border-radius: 8px 8px 0 0 !important;
+  -webkit-border-radius: 8px 8px 0 0 !important;
+  -moz-border-radius: 8px 8px 0 0 !important;
+  -ms-border-radius: 8px 8px 0 0 !important;
+  -o-border-radius: 8px 8px 0 0 !important;
+}
+
 /*======================================
 	End Coming Soon Form
 ========================================*/
