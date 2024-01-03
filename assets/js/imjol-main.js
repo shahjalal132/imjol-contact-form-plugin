@@ -82,6 +82,7 @@ document
     newField.placeholder = "Write Your Requirement?";
     // newField.name = "requirement";
     newField.classList.add("custom-requirement-field");
+    newField.classList.add("mt-3");
 
     var removeButton = document.createElement("button");
     removeButton.textContent = "Remove";
