@@ -37,15 +37,15 @@ function imjol_contact_form_callback() {
                                     <div class="formify-form__form-box formify-form__form-box--v5">
 
                                         <div class="list-group formify-form__nav" id="list-tab" role="tablist">
-                                            <a class="list-group-item active" data-bs-toggle="list" href="#step1"
+                                            <a class="list-group-item active" data-bs-toggle="list" href="#"
                                                 role="tab">Step 1</a>
-                                            <a class="list-group-item" data-bs-toggle="list" href="#step2"
+                                            <a class="list-group-item" data-bs-toggle="list" href="#"
                                                 role="tab">Step 2</a>
-                                            <a class="list-group-item" data-bs-toggle="list" href="#step3"
+                                            <a class="list-group-item" data-bs-toggle="list" href="#"
                                                 role="tab">Step 3</a>
-                                            <a class="list-group-item" data-bs-toggle="list" href="#step4"
+                                            <a class="list-group-item" data-bs-toggle="list" href="#"
                                                 role="tab">Step 4</a>
-                                            <a class="list-group-item" data-bs-toggle="list" href="#step5"
+                                            <a class="list-group-item" data-bs-toggle="list" href="#"
                                                 role="tab">Step 5</a>
                                         </div>
 
@@ -364,9 +364,11 @@ function imjol_contact_form_callback() {
                                                                                 <div class="formify-forms__checkbox">
                                                                                     <label class="m-0" for="checkbox">By
                                                                                         continuing the next level, you
-                                                                                        agree to <a href="https://imjol.com/privacy-policy">Privacy
+                                                                                        agree to <a
+                                                                                            href="https://imjol.com/privacy-policy">Privacy
                                                                                             Policy</a> and <a
-                                                                                            href="https://imjol.com/terms-and-conditions">Terms of
+                                                                                            href="https://imjol.com/terms-and-conditions">Terms
+                                                                                            of
                                                                                             use</a></label>
                                                                                 </div>
                                                                             </div>
@@ -378,16 +380,17 @@ function imjol_contact_form_callback() {
                                                                     <div class="formify-forms__button">
                                                                         <button
                                                                             class="formify-btn prev-step">Previous</button>
-                                                                        <p class="success-message alert alert-success"
-                                                                            role="alert">Thank you! form
-                                                                            submitted successfully</p>
-                                                                        <p class="error-message alert alert-danger"
-                                                                            role="alert">Please fill up all
-                                                                            required fields</p>
                                                                         <button class="formify-btn submit-button"
                                                                             type="submit" id="submit-btn"
                                                                             name="submit">Submit</button>
                                                                     </div>
+                                                                    <!-- Display Error and Success message -->
+                                                                    <p class="success-message mt-3 alert alert-success"
+                                                                        role="alert">Thank you! form
+                                                                        submitted successfully</p>
+                                                                    <p class="error-message mt-3 alert alert-danger"
+                                                                        role="alert">Please fill up all
+                                                                        required fields</p>
                                                                 </div>
                                                             </div>
                                                         </div>

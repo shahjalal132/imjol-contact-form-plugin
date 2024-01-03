@@ -19,6 +19,7 @@ let errorRequirementMessage = document.querySelector(
 let errorBudgetMessage = document.querySelector(".error-budget-message");
 let errorDeadlineMessage = document.querySelector(".error-deadline-message");
 
+// jQuery code
 (function ($) {
   $(document).ready(function () {
     const form = $("#multiStepForm");
