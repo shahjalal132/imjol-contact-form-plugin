@@ -65,7 +65,7 @@ function imjol_contact_form_callback() {
                                                         <div class="formify-forms__quiz-form formify-mg-top-40">
                                                             <div class="formify-forms__quiz-form">
                                                                 <!-- Single Group for Multiple Selection (Website) -->
-                                                                <p class="error-check-web-app-soft">Please select at least one Service</p>
+                                                                <p class="error-check-web-app-soft  alert alert-danger" role="alert">Please select at least one Service</p>
                                                                 <div class="form-group formify-mg-top-15">
                                                                     <div
                                                                         class="formify-forms__input formify-forms__input--quiz">
@@ -164,7 +164,7 @@ function imjol_contact_form_callback() {
                                                             Requirement</h3>
                                                         <div class="formify-forms__quiz-form formify-mg-top-10">
                                                             <button class="required">Your Requirement</button>
-                                                            <p class="error-requirement-message">
+                                                            <p class="error-requirement-message alert alert-danger" role="alert">
                                                                 Please write your requirement
                                                             </p>
                                                             <div id="fieldContainer">
@@ -187,7 +187,7 @@ function imjol_contact_form_callback() {
                                                 <!-- Step 3 -->
                                                 <div class="tab-pane fade show active" id="step3">
                                                     <div class="formify-forms__quiz-single">
-                                                        <p class="error-budget-message">
+                                                        <p class="error-budget-message alert alert-danger" role="alert">
                                                             Please select your budget
                                                         </p>
                                                         <h3 class="formify-forms__quiz-title--v5 m-0">Write Your Budget?
@@ -242,7 +242,7 @@ function imjol_contact_form_callback() {
                                                         <div class="formify-forms__quiz-form formify-mg-top-40">
                                                             <div class="formify-forms__quiz-form">
                                                                 <!-- Single Group for Multiple Selection (Website) -->
-                                                                <p class="error-deadline-message">
+                                                                <p class="error-deadline-message alert alert-danger" role="alert">
                                                                     Please select your deadline
                                                                 </p>
                                                                 <div class="time-dropdown">
@@ -369,9 +369,9 @@ function imjol_contact_form_callback() {
                                                                     <div class="formify-forms__button">
                                                                         <button
                                                                             class="formify-btn prev-step">Previous</button>
-                                                                        <p class="success-message">Thank you! form
+                                                                        <p class="success-message alert alert-success" role="alert">Thank you! form
                                                                             submitted successfully</p>
-                                                                        <p class="error-message">Please fill up all
+                                                                        <p class="error-message alert alert-danger" role="alert">Please fill up all
                                                                             required fields</p>
                                                                         <button class="formify-btn submit-button"
                                                                             type="submit" id="submit-btn"
