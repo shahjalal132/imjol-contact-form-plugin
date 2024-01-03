@@ -82,15 +82,15 @@ if ( !empty( $first_name ) ) {
 
         // Check if the email was sent successfully
         if ( $mailSuccess ) {
-            echo '';
+            // Redirect to the thanks page
+            wp_redirect( home_url( '/success-page/' ) );
+            exit;
         } else {
-            echo '';
+            echo 'Email not sent. Please try again.';
         }
     } else {
-        echo '';
+        echo 'form not send. Please try again.';
     }
-} else {
-    echo '';
 }
 
 
