@@ -364,9 +364,9 @@ function imjol_contact_form_callback() {
                                                                                 <div class="formify-forms__checkbox">
                                                                                     <label class="m-0" for="checkbox">By
                                                                                         continuing the next level, you
-                                                                                        agree to <a href="#">Privacy
+                                                                                        agree to <a href="https://imjol.com/privacy-policy">Privacy
                                                                                             Policy</a> and <a
-                                                                                            href="#">Terms of
+                                                                                            href="https://imjol.com/terms-and-conditions">Terms of
                                                                                             use</a></label>
                                                                                 </div>
                                                                             </div>
