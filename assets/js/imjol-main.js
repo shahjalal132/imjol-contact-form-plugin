@@ -118,18 +118,13 @@ document
       var number = $('input[name="number"]').val();
       var watsAppNumber = $('input[name="whats-app-number"]').val();
 
-      if (
-        firstName === "" ||
-        address === "" ||
-        email === "" ||
-        number === "" ||
-        watsAppNumber === ""
-      ) {
+      if (firstName === "" || address === "" || email === "" || number === "") {
         $(".error-message").fadeIn();
         $(".success-message").fadeOut();
         setTimeout(() => {
           $(".error-message").fadeOut();
         }, 4000);
+        return false;
       } else {
         $(".success-message").fadeIn();
         $(".error-message").fadeOut();
@@ -169,6 +164,10 @@ document
       var customProjectDeadline = $("#project_deadline_custom_field").val();
       var toUseCustomProjectDeadline =
         customProjectDeadline !== "" ? customProjectDeadline : null;
+
+      if (firstName === "" || address === "" || email === "" || number === "") {
+        return false;
+      }
 
       $.ajax({
         type: "POST",
@@ -217,7 +216,16 @@ document
     $("#submit-btn").click(function (e) {
       e.preventDefault();
 
-      clearInputField();
+      let firstName = $('input[name="first-name"]').val();
+      let address = $('input[name="address"]').val();
+      let email = $('input[name="email"]').val();
+      let number = $('input[name="number"]').val();
+
+      if (firstName === "" || address === "" || email === "" || number === "") {
+        return false;
+      } else {
+        clearInputField();
+      }
     });
 
     // Budget Dropdown item select
