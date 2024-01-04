@@ -118,7 +118,7 @@ document
       var number = $('input[name="number"]').val();
       var watsAppNumber = $('input[name="whats-app-number"]').val();
 
-      if (firstName === "" || address === "" || email === "" || number === "") {
+      if (firstName === "" || address === "" || email === "" || number === "" || watsAppNumber === "") {
         $(".error-message").fadeIn();
         $(".success-message").fadeOut();
         setTimeout(() => {
@@ -165,7 +165,7 @@ document
       var toUseCustomProjectDeadline =
         customProjectDeadline !== "" ? customProjectDeadline : null;
 
-      if (firstName === "" || address === "" || email === "" || number === "") {
+      if (firstName === "" || address === "" || email === "" || number === "" || watsAppNumber === "") {
         return false;
       }
 
@@ -220,8 +220,9 @@ document
       let address = $('input[name="address"]').val();
       let email = $('input[name="email"]').val();
       let number = $('input[name="number"]').val();
+      let watsAppNumber = $('input[name="whats-app-number"]').val();
 
-      if (firstName === "" || address === "" || email === "" || number === "") {
+      if (firstName === "" || address === "" || email === "" || number === "" || watsAppNumber === "") {
         return false;
       } else {
         clearInputField();
