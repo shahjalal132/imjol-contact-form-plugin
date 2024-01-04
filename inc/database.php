@@ -14,17 +14,17 @@ $mobile_app_value = isset( $mobile_app ) ? 1 : 0;
 
 $customBudget    = isset( $all_data['customBudget'] ) ? $all_data['customBudget'] : null;
 $select_budget   = isset( $all_data['budget'] ) ? $all_data['budget'] : null;
-$fullBudget      = $customBudget . $select_budget;
+$fullBudget      = $customBudget . " " . $select_budget;
 $trimFullBudget  = trim( $fullBudget );
 
 $customDeadline    = isset( $all_data['customProjectDeadline'] ) ? $all_data['customProjectDeadline'] : null;
 $select_deadline   = isset( $all_data['deadline'] ) ? $all_data['deadline'] : null;
-$fullDeadline      = $customDeadline . $select_deadline;
+$fullDeadline      = $customDeadline . " " . $select_deadline;
 $trimDeadline      = trim( $fullDeadline );
 
 // Cleaned budget and deadline values
 $cleanFullBudget = str_replace("Budget Planner", "", $trimFullBudget);
-$cleanFullDeadline = str_replace("Preferred Project Duration", "", $trimDeadline);
+$cleanFullDeadline = str_replace(" Preferred Project Duration", "", $trimDeadline);
 
 $requirement     = isset( $all_data['requirement'] ) ? $all_data['requirement'] : null;
 $newRequirement  = isset( $all_data['newRequirement'] ) ? $all_data['newRequirement'] : null;
