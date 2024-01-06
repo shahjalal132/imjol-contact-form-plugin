@@ -118,7 +118,13 @@ document
       var number = $('input[name="number"]').val();
       var watsAppNumber = $('input[name="whats-app-number"]').val();
 
-      if (firstName === "" || address === "" || email === "" || number === "" || watsAppNumber === "") {
+      if (
+        firstName === "" ||
+        address === "" ||
+        email === "" ||
+        number === "" ||
+        watsAppNumber === ""
+      ) {
         $(".error-message").fadeIn();
         $(".success-message").fadeOut();
         setTimeout(() => {
@@ -133,6 +139,8 @@ document
         }, 4000);
       }
     });
+
+    // let newRequirement = document.querySelectorAll(".custom-requirement-field").value;
 
     // Save Form Data with AJAX
     var selectedBudget;
@@ -152,8 +160,15 @@ document
       var watsAppNumber = $('input[name="whats-app-number"]').val();
 
       // Custom requirement field value get conditionally
-      var newRequirement = $(".custom-requirement-field").val();
-      var toUseNewRequirement = newRequirement !== "" ? newRequirement : null;
+      /* var newRequirement = $(".custom-requirement-field").val();
+      var toUseNewRequirement = newRequirement !== "" ? newRequirement : null; */
+
+      var newRequirements = [];
+
+      $(".custom-requirement-field").each(function () {
+        var value = $(this).val();
+        newRequirements.push(value !== "" ? value : null);
+      });
 
       // Custom budget field value get conditionally
       var customBudgetPlanner = $("#budget_planer_custom_field").val();
@@ -165,7 +180,13 @@ document
       var toUseCustomProjectDeadline =
         customProjectDeadline !== "" ? customProjectDeadline : null;
 
-      if (firstName === "" || address === "" || email === "" || number === "" || watsAppNumber === "") {
+      if (
+        firstName === "" ||
+        address === "" ||
+        email === "" ||
+        number === "" ||
+        watsAppNumber === ""
+      ) {
         return false;
       }
 
@@ -177,7 +198,7 @@ document
           website: website,
           mobileApp: mobileApp,
           requirement: requirement,
-          newRequirement: toUseNewRequirement, // added newRequirement
+          newRequirement: newRequirements, // added newRequirement
           firstName: firstName,
           address: address,
           email: email,
@@ -222,7 +243,13 @@ document
       let number = $('input[name="number"]').val();
       let watsAppNumber = $('input[name="whats-app-number"]').val();
 
-      if (firstName === "" || address === "" || email === "" || number === "" || watsAppNumber === "") {
+      if (
+        firstName === "" ||
+        address === "" ||
+        email === "" ||
+        number === "" ||
+        watsAppNumber === ""
+      ) {
         return false;
       } else {
         clearInputField();
