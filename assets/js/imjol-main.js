@@ -129,14 +129,14 @@ document
         $(".success-message").fadeOut();
         setTimeout(() => {
           $(".error-message").fadeOut();
-        }, 4000);
+        }, 2000);
         return false;
       } else {
         $(".success-message").fadeIn();
         $(".error-message").fadeOut();
         setTimeout(() => {
           $(".success-message").fadeOut();
-        }, 4000);
+        }, 2000);
       }
     });
 

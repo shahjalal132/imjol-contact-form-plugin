@@ -28,7 +28,15 @@ $cleanFullDeadline = str_replace(" Preferred Project Duration", "", $trimDeadlin
 
 $requirement     = isset( $all_data['requirement'] ) ? $all_data['requirement'] : null;
 $newRequirement  = isset( $all_data['newRequirement'] ) ? $all_data['newRequirement'] : null;
-$fullRequirement = $requirement . ', ' . $newRequirement;
+// do foreach loop in $newRequirement and send it to $fullRequirement single string
+$customRequirement = $requirement;
+// $customRequirement = '';
+if (!empty($newRequirement)) {
+    foreach ($newRequirement as $requirement) {
+        $customRequirement .= ', ' . $requirement;
+    }
+}
+$fullRequirement = $customRequirement;
 
 $first_name    = isset( $all_data['firstName'] ) ? $all_data['firstName'] : null;
 $address       = isset( $all_data['address'] ) ? $all_data['address'] : null;

@@ -85,7 +85,7 @@ let errorDeadlineMessage = document.querySelector(".error-deadline-message");
         errorCheckWebAppSoft.style.display = "block";
         setTimeout(function () {
           errorCheckWebAppSoft.style.display = "none";
-        }, 4000);
+        }, 2000);
         return false;
       }
 
@@ -94,7 +94,7 @@ let errorDeadlineMessage = document.querySelector(".error-deadline-message");
         errorRequirementMessage.style.display = "block";
         setTimeout(function () {
           errorRequirementMessage.style.display = "none";
-        }, 4000);
+        }, 2000);
         return false;
       }
 
@@ -103,7 +103,7 @@ let errorDeadlineMessage = document.querySelector(".error-deadline-message");
         errorBudgetMessage.style.display = "block";
         setTimeout(function () {
           errorBudgetMessage.style.display = "none";
-        }, 4000);
+        }, 2000);
         return false;
       }
 
@@ -112,7 +112,7 @@ let errorDeadlineMessage = document.querySelector(".error-deadline-message");
         errorDeadlineMessage.style.display = "block";
         setTimeout(function () {
           errorDeadlineMessage.style.display = "none";
-        }, 4000);
+        }, 2000);
         return false;
       }
 
