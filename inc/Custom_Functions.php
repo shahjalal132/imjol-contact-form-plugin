@@ -66,37 +66,21 @@ function show_all_user_infos() {
             // Conditionally table create
             if ( $imjol_user_data->have_posts() ) {
                 ?>
-                <table>
-                    <style>
-                        table,
-                        th,
-                        td {
-                            border: 1px solid black;
-                            border-collapse: collapse;
-                        }
-
-                        th,
-                        td {
-                            padding-top: 10px;
-                            padding-bottom: 10px;
-                            padding-left: 20px;
-                            padding-right: 20px;
-                        }
-                    </style>
-                    <thead>
+                <table class="table table-striped">
+                    <thead class="thead-dark">
                         <tr>
-                            <th>User ID</th>
-                            <th>User Name</th>
-                            <th>Address</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th>What's App</th>
-                            <th>Mobile App</th>
-                            <th>Website</th>
-                            <th>Software</th>
-                            <th>Requirements</th>
-                            <th>Budget</th>
-                            <th>Deadline</th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">What's App</th>
+                            <th scope="col">Mobile App</th>
+                            <th scope="col">Website</th>
+                            <th scope="col">Software</th>
+                            <th scope="col">Requirements</th>
+                            <th scope="col">Budget</th>
+                            <th scope="col">Deadline</th>
                         </tr>
                     </thead>
                     <tbody>

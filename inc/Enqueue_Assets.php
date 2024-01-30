@@ -7,6 +7,7 @@ class Enqueue_Assets {
 
     public function setup_hooks() {
         add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_css' ] );
+        add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_admin_css' ] );
         add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_js' ] );
     }
 
@@ -32,6 +33,12 @@ class Enqueue_Assets {
         wp_enqueue_script( 'imjol-api', 'https://www.google.com/recaptcha/api.js' );
 
     }
+
+    public function enqueue_admin_css() {
+        // enqueue bootstrap admin css
+        wp_enqueue_style( 'bootstrap-admin', IMJOL_PLUGIN_URL . '/assets/css/bootstrap.min.css' );
+    }
+
 }
 
 // Initialize the class
