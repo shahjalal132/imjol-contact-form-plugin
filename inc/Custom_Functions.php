@@ -52,6 +52,15 @@ function show_all_user_infos() {
     // Display users information's table
     function show_all_users_infos_html() {
         ?>
+
+        <nav class="navbar navbar-light bg-light mt-4">
+            <form class="form-inline d-flex ms-auto gap-2 me-2">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </nav>
+
+
         <div id="user-infos-table">
             <?php
 
@@ -112,7 +121,7 @@ function show_all_user_infos() {
                         ?>
                     </tbody>
                 </table>
-            <?php
+                <?php
             } else {
                 echo 'No Data Found';
             }
