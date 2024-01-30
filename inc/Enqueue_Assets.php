@@ -37,6 +37,7 @@ class Enqueue_Assets {
     public function enqueue_admin_css() {
         // enqueue bootstrap admin css
         wp_enqueue_style( 'bootstrap-admin', IMJOL_PLUGIN_URL . '/assets/css/bootstrap.min.css' );
+        wp_enqueue_style( 'admin-custom-css', IMJOL_PLUGIN_URL . '/assets/css/admin-css.css' );
     }
 
 }

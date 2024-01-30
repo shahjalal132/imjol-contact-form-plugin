@@ -66,7 +66,7 @@ function show_all_user_infos() {
             // Conditionally table create
             if ( $imjol_user_data->have_posts() ) {
                 ?>
-                <table class="table table-striped">
+                <table class="table table-hover table-striped" id="user-infos-table">
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">ID</th>
