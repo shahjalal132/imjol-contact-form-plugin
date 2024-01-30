@@ -53,9 +53,12 @@ function show_all_user_infos() {
     function show_all_users_infos_html() {
         ?>
 
+        <!-- Search box -->
         <nav class="navbar navbar-light bg-light mt-4">
             <form class="form-inline d-flex ms-auto gap-2 me-2">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control mr-sm-2" id="search-input" name="search-user-requirement"
+                    value="<?php echo isset( $_POST['search-user-requirement'] ) ? esc_attr( $_POST['search-user-requirement'] ) : ''; ?>"
+                    type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
         </nav>
@@ -98,39 +101,39 @@ function show_all_user_infos() {
 
                         <?php
 
-                            global $wpdb;
-                            $query   = "SELECT * FROM `{$wpdb->prefix}imjol_requirement_forms`";
-                            $results = $wpdb->get_results( $query );
+                        global $wpdb;
+                        $query   = "SELECT * FROM `{$wpdb->prefix}imjol_requirement_forms`";
+                        $results = $wpdb->get_results( $query );
 
-                            if ( $results ) {
+                        if ( $results ) {
 
-                                foreach ( $results as $result ) {
+                            foreach ( $results as $result ) {
 
-                                    $need_app      = $result->mobile_app == 1 ? 'Yes' : 'No';
-                                    $need_website  = $result->website == 1 ? 'Yes' : 'No';
-                                    $need_software = $result->software == 1 ? 'Yes' : 'No';
-                                    echo '<tr>';
-                                    echo '<td>' . $result->user_id . '</td>';
-                                    echo '<td>' . $result->first_name . '</td>';
-                                    echo '<td>' . $result->address . '</td>';
-                                    echo '<td>' . $result->email . '</td>';
-                                    echo '<td>' . $result->phone . '</td>';
-                                    echo '<td>' . $result->whatsapp . '</td>';
-                                    echo '<td>' . $need_app . '</td>';
-                                    echo '<td>' . $need_website . '</td>';
-                                    echo '<td>' . $need_software . '</td>';
-                                    echo '<td>' . $result->requirement . '</td>';
-                                    echo '<td>' . $result->budget . '</td>';
-                                    echo '<td>' . $result->deadline . '</td>';
-                                    echo '</tr>';
-                                }
+                                $need_app      = $result->mobile_app == 1 ? 'Yes' : 'No';
+                                $need_website  = $result->website == 1 ? 'Yes' : 'No';
+                                $need_software = $result->software == 1 ? 'Yes' : 'No';
+                                echo '<tr>';
+                                echo '<td>' . $result->user_id . '</td>';
+                                echo '<td>' . $result->first_name . '</td>';
+                                echo '<td>' . $result->address . '</td>';
+                                echo '<td>' . $result->email . '</td>';
+                                echo '<td>' . $result->phone . '</td>';
+                                echo '<td>' . $result->whatsapp . '</td>';
+                                echo '<td>' . $need_app . '</td>';
+                                echo '<td>' . $need_website . '</td>';
+                                echo '<td>' . $need_software . '</td>';
+                                echo '<td>' . $result->requirement . '</td>';
+                                echo '<td>' . $result->budget . '</td>';
+                                echo '<td>' . $result->deadline . '</td>';
+                                echo '</tr>';
                             }
+                        }
                         ?>
 
                     </tbody>
 
                 </table>
-                
+
                 <?php
             } else {
                 echo 'No Data Found';
