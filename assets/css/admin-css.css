@@ -21,3 +21,14 @@
   background-color: #2271b1;
   border-color: #2271b1;
 }
+
+.btn-outline-success {
+  color: #2271b1 !important;
+  border-color: #2271b1 !important;
+}
+
+.btn-outline-success:hover {
+  color: #fff !important;
+  background-color: #2271b1;
+  border-color: #2271b1;
+}
