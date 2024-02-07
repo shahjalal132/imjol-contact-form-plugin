@@ -65,87 +65,63 @@ function show_all_user_infos() {
 
 
         <div id="user-infos-table">
-            <?php
 
-            global $wpdb;
-            $table_name = $wpdb->prefix . 'imjol_requirement_forms';
+            <table class="table table-hover table-striped" id="user-infos-table">
 
-            // Retrieve Data From Database
-            $imjol_user_data = new WP_Query( [
-                'table_name' => $table_name,
-                'fields'     => [ 'user_id', 'first_name', 'address', 'email', 'phone', 'whatsapp', 'mobile_app', 'website', 'software', 'requirement', 'budget', 'deadline' ],
-                'order_by'   => 'user_id',
-                'order'      => 'ASC',
-            ] );
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">What's App</th>
+                        <th scope="col">Mobile App</th>
+                        <th scope="col">Website</th>
+                        <th scope="col">Software</th>
+                        <th scope="col">Requirements</th>
+                        <th scope="col">Budget</th>
+                        <th scope="col">Deadline</th>
+                    </tr>
+                </thead>
 
-            // Conditionally table create
-            if ( $imjol_user_data->have_posts() ) {
-                ?>
-                <table class="table table-hover table-striped" id="user-infos-table">
+                <tbody>
 
-                    <thead class="thead-dark">
-                        <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Address</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Phone</th>
-                            <th scope="col">What's App</th>
-                            <th scope="col">Mobile App</th>
-                            <th scope="col">Website</th>
-                            <th scope="col">Software</th>
-                            <th scope="col">Requirements</th>
-                            <th scope="col">Budget</th>
-                            <th scope="col">Deadline</th>
-                        </tr>
-                    </thead>
+                    <?php
 
-                    <tbody>
+                    global $wpdb;
+                    $query   = "SELECT * FROM `{$wpdb->prefix}imjol_requirement_forms`";
+                    $results = $wpdb->get_results( $query );
 
-                        <?php
+                    if ( $results ) {
 
-                        global $wpdb;
-                        $query   = "SELECT * FROM `{$wpdb->prefix}imjol_requirement_forms`";
-                        $results = $wpdb->get_results( $query );
+                        foreach ( $results as $result ) {
 
-                        if ( $results ) {
-
-                            foreach ( $results as $result ) {
-
-                                $need_app      = $result->mobile_app == 1 ? 'Yes' : 'No';
-                                $need_website  = $result->website == 1 ? 'Yes' : 'No';
-                                $need_software = $result->software == 1 ? 'Yes' : 'No';
-                                echo '<tr>';
-                                echo '<td>' . $result->user_id . '</td>';
-                                echo '<td>' . $result->first_name . '</td>';
-                                echo '<td>' . $result->address . '</td>';
-                                echo '<td>' . $result->email . '</td>';
-                                echo '<td>' . $result->phone . '</td>';
-                                echo '<td>' . $result->whatsapp . '</td>';
-                                echo '<td>' . $need_app . '</td>';
-                                echo '<td>' . $need_website . '</td>';
-                                echo '<td>' . $need_software . '</td>';
-                                echo '<td>' . $result->requirement . '</td>';
-                                echo '<td>' . $result->budget . '</td>';
-                                echo '<td>' . $result->deadline . '</td>';
-                                echo '</tr>';
-                            }
+                            $need_app      = $result->mobile_app == 1 ? 'Yes' : 'No';
+                            $need_website  = $result->website == 1 ? 'Yes' : 'No';
+                            $need_software = $result->software == 1 ? 'Yes' : 'No';
+                            echo '<tr>';
+                            echo '<td>' . $result->user_id . '</td>';
+                            echo '<td>' . $result->first_name . '</td>';
+                            echo '<td>' . $result->address . '</td>';
+                            echo '<td>' . $result->email . '</td>';
+                            echo '<td>' . $result->phone . '</td>';
+                            echo '<td>' . $result->whatsapp . '</td>';
+                            echo '<td>' . $need_app . '</td>';
+                            echo '<td>' . $need_website . '</td>';
+                            echo '<td>' . $need_software . '</td>';
+                            echo '<td>' . $result->requirement . '</td>';
+                            echo '<td>' . $result->budget . '</td>';
+                            echo '<td>' . $result->deadline . '</td>';
+                            echo '</tr>';
                         }
-                        ?>
+                    }
+                    ?>
 
-                    </tbody>
+                </tbody>
 
-                </table>
-
-                <?php
-            } else {
-                echo 'No Data Found';
-            }
-
-            ?>
+            </table>
         </div>
         <?php
     }
 }
-
-?>
