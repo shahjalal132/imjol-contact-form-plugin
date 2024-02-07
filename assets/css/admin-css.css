@@ -1,4 +1,23 @@
-#user-infos-table{
-    padding-top: 20px;
-    border-top: 1px solid #ccc;
+#user-infos-table {
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+}
+
+.page-numbers {
+  position: relative;
+  color: #2271b1;
+  text-decoration: none;
+  padding: 0.375rem 0.75rem;
+  margin-left: -1px;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.current {
+  z-index: 3;
+  color: #fff;
+  background-color: #2271b1;
+  border-color: #2271b1;
 }

@@ -55,7 +55,7 @@ function show_all_user_infos() {
         $table_name = $wpdb->prefix . 'imjol_requirement_forms';
 
         // Get current page number
-        $current_page = max( 1, get_query_var( 'paged' ) );
+        $current_page = max( 1, isset( $_GET['paged'] ) ? intval( $_GET['paged'] ) : 1 );
         $per_page     = 10;
         $offset       = ( $current_page - 1 ) * $per_page;
 
@@ -70,7 +70,7 @@ function show_all_user_infos() {
         <nav class="navbar navbar-light bg-light mt-4">
             <form class="form-inline d-flex ms-auto gap-2 me-2">
                 <input class="form-control mr-sm-2" id="search-input" name="search-user-requirement"
-                    value="<?php echo isset( $_POST['search-user-requirement'] ) ? esc_attr( $_POST['search-user-requirement'] ) : ''; ?>"
+                    value="<?php echo isset( $_GET['search-user-requirement'] ) ? esc_attr( $_GET['search-user-requirement'] ) : ''; ?>"
                     type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
@@ -123,7 +123,7 @@ function show_all_user_infos() {
         </div>
 
         <!-- Pagination -->
-        <div class="pagination">
+        <div class="pagination float-end me-3">
             <?php
             $total_items = $wpdb->get_var( "SELECT COUNT(*) FROM $table_name" );
             $total_pages = ceil( $total_items / $per_page );
@@ -132,8 +132,8 @@ function show_all_user_infos() {
                 array(
                     'base'      => add_query_arg( 'paged', '%#%' ),
                     'format'    => '',
-                    'prev_text' => __( '&laquo; Previous' ),
-                    'next_text' => __( 'Next &raquo;' ),
+                    'prev_text' => __( 'Previous' ),
+                    'next_text' => __( 'Next' ),
                     'total'     => $total_pages,
                     'current'   => $current_page,
                 )
