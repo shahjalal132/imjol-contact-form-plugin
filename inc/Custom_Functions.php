@@ -38,6 +38,7 @@ function imjol_db_table_remove() {
 
 // Register Top Label Menu
 add_action( 'admin_menu', 'show_all_user_infos' );
+
 function show_all_user_infos() {
     add_menu_page(
         'all_users_infos',
@@ -51,6 +52,7 @@ function show_all_user_infos() {
 
     // Display users information's table with pagination
     function show_all_users_infos_html() {
+
         global $wpdb;
         $table_name = $wpdb->prefix . 'imjol_requirement_forms';
 
@@ -59,16 +61,24 @@ function show_all_user_infos() {
         $per_page     = 10;
         $offset       = ( $current_page - 1 ) * $per_page;
 
-        // Fetch results with pagination
-        $query   = "SELECT * FROM $table_name LIMIT $per_page OFFSET $offset";
+        // Fetch results with pagination and search
+        $search_term = isset( $_GET['search-user-requirement'] ) ? sanitize_text_field( $_GET['search-user-requirement'] ) : '';
+        $query       = "SELECT * FROM $table_name";
+
+        // Add WHERE clause if search term is provided
+        if ( !empty( $search_term ) ) {
+            $query .= $wpdb->prepare( " WHERE first_name LIKE %s OR address LIKE %s OR email LIKE %s OR phone LIKE %s", '%' . $search_term . '%', '%' . $search_term . '%', '%' . $search_term . '%', '%' . $search_term . '%' );
+        }
+
+        $query .= " LIMIT $per_page OFFSET $offset";
         $results = $wpdb->get_results( $query );
 
-        // Output table
         ?>
 
         <!-- Search box -->
         <nav class="navbar navbar-light bg-light mt-4">
-            <form class="form-inline d-flex ms-auto gap-2 me-2">
+            <form class="form-inline d-flex ms-auto gap-2 me-2" action="<?php echo esc_url( admin_url( 'admin.php' ) ); ?>">
+                <input class="form-control mr-sm-2" id="search-input" name="page" value="all_users_infos" type="hidden">
                 <input class="form-control mr-sm-2" id="search-input" name="search-user-requirement"
                     value="<?php echo isset( $_GET['search-user-requirement'] ) ? esc_attr( $_GET['search-user-requirement'] ) : ''; ?>"
                     type="search" placeholder="Search" aria-label="Search">
@@ -76,6 +86,7 @@ function show_all_user_infos() {
             </form>
         </nav>
 
+        <!-- Display users information?s table -->
         <div id="user-infos-table">
             <table class="table table-hover table-striped" id="user-infos-table">
                 <thead class="thead-dark">
@@ -96,7 +107,7 @@ function show_all_user_infos() {
                 </thead>
                 <tbody>
                     <?php
-                    if ( $results ) {
+                    if ( !empty( $results ) && is_array( $results ) ) {
                         foreach ( $results as $result ) {
                             $need_app      = $result->mobile_app == 1 ? 'Yes' : 'No';
                             $need_website  = $result->website == 1 ? 'Yes' : 'No';
@@ -123,9 +134,10 @@ function show_all_user_infos() {
         </div>
 
         <!-- Pagination -->
-        <div class="pagination float-end me-3">
+        <div class="pagination float-end me-2">
             <?php
             $total_items = $wpdb->get_var( "SELECT COUNT(*) FROM $table_name" );
+
             $total_pages = ceil( $total_items / $per_page );
 
             echo paginate_links(
@@ -143,5 +155,4 @@ function show_all_user_infos() {
 
         <?php
     }
-
 }
