@@ -67,9 +67,12 @@ function show_all_user_infos() {
         <div id="user-infos-table">
             <?php
 
+            global $wpdb;
+            $table_name = $wpdb->prefix . 'imjol_requirement_forms';
+
             // Retrieve Data From Database
             $imjol_user_data = new WP_Query( [
-                'table_name' => 'wp_imjol_requirement_forms',
+                'table_name' => $table_name,
                 'fields'     => [ 'user_id', 'first_name', 'address', 'email', 'phone', 'whatsapp', 'mobile_app', 'website', 'software', 'requirement', 'budget', 'deadline' ],
                 'order_by'   => 'user_id',
                 'order'      => 'ASC',
