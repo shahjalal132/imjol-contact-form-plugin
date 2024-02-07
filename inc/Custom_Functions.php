@@ -49,8 +49,21 @@ function show_all_user_infos() {
         30
     );
 
-    // Display users information's table
+    // Display users information's table with pagination
     function show_all_users_infos_html() {
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'imjol_requirement_forms';
+
+        // Get current page number
+        $current_page = max( 1, get_query_var( 'paged' ) );
+        $per_page     = 10;
+        $offset       = ( $current_page - 1 ) * $per_page;
+
+        // Fetch results with pagination
+        $query   = "SELECT * FROM $table_name LIMIT $per_page OFFSET $offset";
+        $results = $wpdb->get_results( $query );
+
+        // Output table
         ?>
 
         <!-- Search box -->
@@ -63,11 +76,8 @@ function show_all_user_infos() {
             </form>
         </nav>
 
-
         <div id="user-infos-table">
-
             <table class="table table-hover table-striped" id="user-infos-table">
-
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">ID</th>
@@ -84,19 +94,10 @@ function show_all_user_infos() {
                         <th scope="col">Deadline</th>
                     </tr>
                 </thead>
-
                 <tbody>
-
                     <?php
-
-                    global $wpdb;
-                    $query   = "SELECT * FROM `{$wpdb->prefix}imjol_requirement_forms`";
-                    $results = $wpdb->get_results( $query );
-
                     if ( $results ) {
-
                         foreach ( $results as $result ) {
-
                             $need_app      = $result->mobile_app == 1 ? 'Yes' : 'No';
                             $need_website  = $result->website == 1 ? 'Yes' : 'No';
                             $need_software = $result->software == 1 ? 'Yes' : 'No';
@@ -117,11 +118,30 @@ function show_all_user_infos() {
                         }
                     }
                     ?>
-
                 </tbody>
-
             </table>
         </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <?php
+            $total_items = $wpdb->get_var( "SELECT COUNT(*) FROM $table_name" );
+            $total_pages = ceil( $total_items / $per_page );
+
+            echo paginate_links(
+                array(
+                    'base'      => add_query_arg( 'paged', '%#%' ),
+                    'format'    => '',
+                    'prev_text' => __( '&laquo; Previous' ),
+                    'next_text' => __( 'Next &raquo;' ),
+                    'total'     => $total_pages,
+                    'current'   => $current_page,
+                )
+            );
+            ?>
+        </div>
+
         <?php
     }
+
 }
